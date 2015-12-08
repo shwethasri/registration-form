@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Registration Form </title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="hyphen.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="registrationform.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-12">
+        <div class="col-md-12 page-header">
+          <h1><label class="text-center text-primary middle"> Registration Form </label></h1>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="col-md-12">
+          <h4><label class="text-center text-primary"> Personal Information </label></h4>
+          <hr>
+        </div>
+        <div class="col-md-6">
+          <label class="text-center text--secondary"> firstname* </label>
+          <input id="firstname" class="input text-left text--secondary" type="text" placeholder="firstname*" onchange="alertId(firstname)">
+          <div id="firstnameDiv" class="alert alert-warning hide">enter firstname </div>
+        </div>
+        <div class="col-md-6">
+          <label class="text-center text--secondary"> lastname* </label>
+          <input id="lastname" class="input text-left text--secondary" type="text" placeholder="lastname*" onchange="alertId(lastname)">
+          <div id="last-childnameDiv" class="alert alert-warning hide">enter lastname </div>
+        </div>
+        <div class="col-md-12">
+          <br>
+        </div>
+        <div class="col-md-6">
+          <div class="input-icon input-icon--right">
+            <label class="text-center text--secondary"> Date of Birth* </label>
+            <i class="fa fa-calendar input-icon__icon"></i>
+          </div>
+          <div class="input-icon input-icon--right">
+            <i class="fa fa-calendar input-icon__icon"></i>
+            <input id="dateofbirth" type="date" class="input text-left text--secondary" placeholder="date of birth*" onchange="alertId(dateofbirth)"/>
+            <div id="dateofbirthDiv" class="alert alert-warning hide">enter date of birth </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="text-center text--secondary"> Age </label>
+          <input class="input input--disabled text-left" type="text" placeholder="age">
+        </div>
+        <div class="col-md-12">
+          <br>
+        </div>
+        <div class="col-md-6">
+          <label class="text-center text--secondary"> Mobile no* </label>
+          <input id="mobileno" class="input text-left text--secondary" type="text" placeholder="mobileno*" onchange="alertId(mobileno)">
+          <div id="mobilenoDiv" class="alert alert-danger hide">enter mobile no of 10 digits</div>
+          <div id="mobilenowarnDiv" class="alert alert-warning hide">enter valid mobile no </div>
+        </div>
+        <div class="col-md-6">
+          <label class="text-center text--secondary"> Gender </label>
+          <br>
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+        </div>
+        <div class="col-md-12">
+          <br>
+        </div>
+        <div class="col-md-4">
+          <label class="text-center text--secondary"> City* </label>
+          <input id="city" class="input text-left text--secondary" type="text" placeholder="City*" onchange="alertId(city)">
+          <div id="cityDiv" class="alert alert-warning hide">enter city </div>
+        </div>
+        <div class="col-md-4">
+          <label class="text-center text--secondary"> State* </label>
+          <select class="input"></select>
+        </div>
+        <div class="col-md-4">
+          <label class="text-center text--secondary"> Country* </label>
+          <select class="input"></select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="col-md-12">
+          <h4><label class="text-center text-primary"> Mail Information </label></h4>
+          <hr>
+        </div>
+        <div class="col-md-6">
+          <div class="input-icon input-icon--right">
+            <i class="fa fa-envelope input-icon input-icon__icon"></i>
+            <label class="text-center text--secondary"> Email* </label>
+          </div>
+          <div class="input-icon input-icon--right">
+            <i class="fa fa-envelope input-icon input-icon__icon"></i>
+            <input id="email" class="input text-left text--secondary" type="text" placeholder="Email*" onchange="alertId(email)">
+            <div id="emailDiv" class="alert alert-danger hide">enter email </div>
+            <div id="emailwarnDiv" class="alert alert-warning hide">enter valid email </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="text-center text--secondary"> verification code </label>
+          <input id="verificationcode" class="input text-left text--secondary" type="text" placeholder="verification code" onchange="alertId(verificationcode)">
+          <div id="verificationcodeDiv" class="alert alert-warning hide">enter verification code </div>
+        </div>
+        <div class="col-md-12">
+          <br>
+        </div>
+        <div class="col-md-6">
+          <div class="input-icon input-icon--right">
+            <i class="fa fa-user input-icon input-icon__icon"></i>
+            <label class="text-center text--secondary"> Username* </label>
+          </div>
+          <div class="input-icon input-icon--right">
+            <i class="fa fa-user input-icon input-icon__icon"></i>
+            <input id="username" class="input text-left text--secondary" type="text" placeholder="Username*" onchange="alertId(username)">
+            <div id="useernameDiv" class="alert alert-warning hide">enter username </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <br>
+          <br>
+          <button class="btn-success btn--round middle"> Check Availability </button>
+        </div>
+        <div class="col-md-12">
+          <br>
+        </div>
+        <div class="col-md-6">
+          <div class="input-icon input-icon--right">
+            <i class="fa fa-lock input-icon input-icon__icon"></i>
+            <label class="text-center text--secondary"> Password* </label>
+          </div>
+          <div class="input-icon input-icon--right">
+            <i class="fa fa-lock input-icon input-icon__icon"></i>
+            <input id="password" class="input text-left text--secondary" type="password" placeholder="pasword*" onchange="alertId(password)">
+            <div id="passwordDiv" class="alert alert-danger hide">enter password </div>
+            <div id="passwordwarnDiv" class="alert alert-warning hide">password length must be more 6 characters </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-icon input-icon--right">
+            <i class="fa fa-lock input-icon input-icon__icon"></i>
+            <label class="text-center text--secondary"> Re-type Password* </label>
+          </div>
+          <div class="input-icon input-icon--right">
+            <i class="fa fa-lock input-icon input-icon__icon"></i>
+            <input id="retypepassword" class="input input--alert text-left text--secondary" type="password" placeholder="re-type pasword*" onchange="alertId(retypepassword)">
+            <div id="retypepasswordDiv" class="alert alert-danger hide">re-type password </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <br>
+        </div>
+        <div class="col-md-12">
+          <br>
+        </div>
+        <div class="col-md-12">
+          <br>
+        </div>
+        <div class="col-md-12">
+            <input class="left" type="checkbox"> I agree the terms of services and privacy policy
+        </div>
+      </div>
+      <div class="col-md-12">
+        <hr>
+      </div>
+      <div class="col-md-12">
+        <br>
+      </div>
+      <div class="col-md-6">
+        <button class="btn-default btn-lg btn--round middle"> Cancel </button>
+      </div>
+      <div class="col-md-6">
+        <button class="btn-primary btn-lg btn--round middle" onclick="popup()"> Create </button>
+      </div>
+    </div>
+    <script src="jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="registrationform.js"></script>
+  </body>
+</html>
